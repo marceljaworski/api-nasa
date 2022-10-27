@@ -6,18 +6,19 @@ import Col from 'react-bootstrap/Col';
 import DateForm from './components/Form';
 import {useState} from 'react';
 import Apod from './components/Apod'
+import moment from 'moment';
 
 
 function App() {
-  const today = moment().format("YYY-MM-DD")
+  const today = moment().format("YYYY-MM-DD")
   const [date, setDate] = useState(today)
   return (
     <div className="App">
       <Container>
         <Row>
-          <Col>
-            <H1>Space Pic des Tages</H1>
-          </Col>
+          
+          <h1>Space Pic des Tages</h1>
+          
         </Row>
         <Row>
           <Col>
