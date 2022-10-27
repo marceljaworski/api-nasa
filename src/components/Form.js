@@ -13,11 +13,11 @@ export default function DateForm () {
     return(
 
         <Form>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="dateInput">
           <Form.Label>Wunchsdatum</Form.Label>
           <InputGroup>
             <Form.Control type="date" value={date} onChange={changeHandler}/>
-            <Button variant="primary" >
+            <Button variant="primary">
                 Button
             </Button>
           </InputGroup>
