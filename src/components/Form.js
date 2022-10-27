@@ -8,7 +8,7 @@ export default function DateForm () {
     const today = moment().format("YYY-MM-DD")
     const [date, setDate] = useState(today)
     const changeHandler = (event) => {
-        console.log(event)
+        setDate(event.target.value)
     }
     return(
 
