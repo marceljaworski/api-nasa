@@ -4,11 +4,13 @@ import { useState } from 'react';
 import InputGroup from 'react-bootstrap';
 import moment from 'moment';
 
-export default function DateForm () {
-    const today = moment().format("YYY-MM-DD")
-    const [date, setDate] = useState(today)
+export default function DateForm ({date, setDate}) {
+   const [formValue, setFormValue] = useState(date)
     const changeHandler = (event) => {
         setDate(event.target.value)
+    }
+    const clickHandler =() => {
+        setDate(formValue)
     }
     return(
 
@@ -16,9 +18,9 @@ export default function DateForm () {
         <Form.Group className="mb-3" controlId="dateInput">
           <Form.Label>Wunchsdatum</Form.Label>
           <InputGroup>
-            <Form.Control type="date" value={date} onChange={changeHandler}/>
-            <Button variant="primary">
-                Button
+            <Form.Control type="date" value={formValue} onChange={changeHandler}/>
+            <Button variant="primary" onClick={clickHandler}>
+                Senden
             </Button>
           </InputGroup>
         </Form.Group>
